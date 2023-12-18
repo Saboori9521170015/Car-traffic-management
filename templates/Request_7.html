@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Request 7</title>
+  {% load static %}
+  <link rel= "stylesheet" type= "text/css" href= "{% static 'styles/style.css' %}"></head>
+</head>
+<body>
+
+
+<main class="main">
+  <aside class="sidebar">
+    <nav class="nav">
+      <ul>
+        <li><a href='{% url 'index' %}'>Home</a></li>
+        <li><a href='{% url 'Request1' %}'>Blue and Red Cars</a></li>
+        <li><a href='{% url 'Request2_1' %}'>Add Owener</a></li>
+        <li><a href='{% url 'Request2_2' %}'>Add Car</a></li>
+		<li><a href='{% url 'Request3' %}'>Age over 70 years</a></li>
+		<li><a href='{% url 'Request4' %}'>Illegal passing of the cars</a></li>
+		<li><a href='{% url 'Request5' %}'>Datetime of Toll Car & Owner</a></li>
+		<li><a href='{% url 'Request6_1' %}'>600m from Toll Station Now</a></li>
+        <li><a href='{% url 'Request6_2' %}'>600m from Toll Station Old</a></li>
+		<li class="active"><a href='#'>Car and owener Toll</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <section class="col-75">
+    <div class="container3">
+        <p class="Result_C" dir="rtl"> نام و کد ملی مالک هایی که تخلف عوارضی داشته اند به ترتیب میزان تخلف </p>
+        <br>
+        <p class="Result_C">
+            {% for Value in Values %}
+            <br >{{ Value }}<br>
+	        {% endfor %}
+	    </p>
+    </div>
+  </section>
+</main>
+  
+</body>
+</html>

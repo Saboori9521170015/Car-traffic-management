@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+
+
+
+<form method="post" >{% csrf_token %}
+      <input type="Text" name="F_name">
+      <input type="submit" value="Reply" name ="message_frm">
+</form>
+<h1>Hello {{ R }}, how are you?</h1>
+
+</body>
+</html>

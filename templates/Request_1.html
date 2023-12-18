@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Request 1</title>
+  {% load static %}
+  <link rel= "stylesheet" type= "text/css" href= "{% static 'styles/style.css' %}"></head>
+<body>
+
+
+<main class="main">
+  <aside class="sidebar">
+    <nav class="nav">
+      <ul>
+        <li><a href='{% url 'index' %}'>Home</a></li>
+        <li class="active"><a href="#">Blue and Red Cars</a></li>
+        <li><a href='{% url 'Request2_1' %}'>Add Owener</a></li>
+        <li><a href='{% url 'Request2_2' %}'>Add Car</a></li>
+		<li><a href='{% url 'Request3' %}'>Age over 70 years</a></li>
+		<li><a href='{% url 'Request4' %}'>Illegal passing of the cars</a></li>
+		<li><a href='{% url 'Request5' %}'>Datetime of Toll Car & Owner</a></li>
+		<li><a href='{% url 'Request6_1' %}'>600m from Toll Station Now</a></li>
+        <li><a href='{% url 'Request6_2' %}'>600m from Toll Station Old</a></li>
+		<li><a href='{% url 'Request7' %}'>Car and owener Toll</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <section class="col-75">
+    <div class="container3">
+        <p class="Result_C" dir="rtl"> لیست خودرو هایی که رنگ قرمز و آبی دارند </p>
+        <br></br>
+        <p class="Result_C">
+            {% for Value in Values %}
+            <br>{{ Value }}<br>
+	        {% endfor %}
+	    </p>
+    </div>
+  </section>
+</main>
+  
+</body>
+</html>

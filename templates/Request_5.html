@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Datetime of Toll Car & Owner</title>
+
+  {% load static %}
+  <link rel= "stylesheet" type= "text/css" href= "{% static 'styles/style.css' %}"></head>
+
+</head>
+<body>
+
+
+<main class="main">
+  <aside class="sidebar">
+    <nav class="nav">
+      <ul>
+        <li><a href='{% url 'index' %}'>Home</a></li>
+        <li><a href='{% url 'Request1' %}'>Blue and Red Cars</a></li>
+        <li><a href='{% url 'Request2_1' %}'>Add Owener</a></li>
+        <li><a href='{% url 'Request2_2' %}'>Add Car</a></li>
+		<li><a href='{% url 'Request3' %}'>Age over 70 years</a></li>
+		<li><a href='{% url 'Request4' %}'>Illegal passing of the cars</a></li>
+		<li class="active"><a href="#">Datetime of Toll Car & Owner</a></li>
+		<li><a href='{% url 'Request6_1' %}'>600m from Toll Station Now</a></li>
+        <li><a href='{% url 'Request6_2' %}'>600m from Toll Station Old</a></li>
+		<li><a href='{% url 'Request7' %}'>Car and owener Toll</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+<div class="container3">
+  <form action="" method="post" >{% csrf_token %}
+    <div class="row">
+
+      <div class="col-75">
+        <br>
+        <br>
+        <p class="Result_C" dir="rtl" > عوارض یک خودرو و مالک در طول مدت زمان معین </p>
+        <br>
+        <br>
+
+        <input type="text" id="national_code" name="national_code" placeholder="National code..">
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-75">
+
+        <input type="text" id="Start_date" name="Start_date" placeholder="Start date.. example:2023-01-01">
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-75">
+
+        <input type="text" id="End_date" name="End_date" placeholder="End date.. example:2023-01-01">
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-75">
+
+        <input type="text" id="Start_time" name="Start_time" placeholder="Start Time (just hour).. example 00 or 02">
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-75">
+
+        <input type="text" id="End_time" name="End_time" placeholder="End Time (just hour).. example 00 or 04">
+
+      </div>
+
+    </div>
+
+
+
+    <div class="row">
+		
+		
+	  <br>
+		
+      <input type="submit" value="Submit" name ="message_frm">
+
+    </div>
+
+  </form>
+
+</div>
+</main>
+  
+</body>
+</html>

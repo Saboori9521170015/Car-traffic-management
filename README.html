@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notonaskharabic.css">
+    <title>مستند بدون عنوان</title>
+    <style>
+        html, body {
+            font-family: 'Noto Naskh Arabic';
+            margin: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+<p><strong>با عرض سلام و احترام
+پروژه به شرح زیر می باشد:</strong></p>
+<h2 id="عنوان-پروژه">عنوان پروژه</h2>
+<p>سیسیتم کنترل و مدیریت تردد خودروها</p>
+<h2 id="شرح-پروژه">شرح پروژه</h2>
+<p>پروژه شامل درخواست هایی است که آنها را از صفحه وب دریافت و سپس نمایش می دهد، این در خواست ها در منوی صفحه وب به شرح زیر می باشد</p>
+<ul>
+<li>درخواست شماره 1:  (blue and red cars)<ul>
+<li><pre><code> نمایش خودروهایی که رنگ قرمز یا آبی دارند. 
+</code></pre>
+</li>
+</ul>
+</li>
+<li>درخواست شماره 2 قسمت 1 : (add owner and car)<ul>
+<li>ایجاد مالک و خودرو </li>
+</ul>
+</li>
+<li>درخواست شماره 2 قسمت 2: (add car)<ul>
+<li>خودرو های دارای مالکین 70 سال به بالا</li>
+</ul>
+</li>
+<li>درخواست شماره 3 : (Age over 70 years)<ul>
+<li><pre><code>خودرو های دارای مالکین 70 سال به بالا
+</code></pre>
+</li>
+</ul>
+</li>
+<li>درخواست شماره 4: (illegal passing of the cars)<ul>
+<li><pre><code>خوردروهای سنگین که در خیابان های کمتر از عرض مجاز بیست متر تردد داشته اند
+</code></pre>
+</li>
+</ul>
+</li>
+<li>درخواست شماره 5:  (datetime of toll car &amp; owner) <ul>
+<li><pre><code>عوارض یک خوردو و مالک در طول مدت زمان معین
+</code></pre>
+</li>
+</ul>
+</li>
+<li>درخواست شماره 6 قسمت 1: (600m from Toll Station Now)<ul>
+<li><pre><code>موقعیت خودروهای سبکی که (الان) در استان تهران و در محدوده ی 600 متری از عوارضی 1 قرار دارند
+</code></pre>
+</li>
+</ul>
+</li>
+<li>درخواست شماره 6 قسمت 2: (600m from Toll Station Old)<ul>
+<li><pre><code>موقعیت خودروهای سبکی که در استان تهران و در محدوده ی 600 متری از عوارضی 1 قرار داشته اند. (در همه زمانها)
+</code></pre>
+</li>
+</ul>
+</li>
+<li>درخواست شماره 7 :<ul>
+<li><pre><code>نام و کد ملی مالک هایی که تخلف عوارضی داشته اند به ترتیب میزان تخلف 
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ماژول-ها-و-برنامه-مورد-نیاز">ماژول ها و برنامه مورد نیاز:</h2>
+<p>پروژه به برنامه Python3 و پایگاه داده PostgreSQL
+احتیاج دارد
+ماژول های مورد استفاده در این پروژه در محیط مجازی پروژه نصب شده اند و نیازی به نصب مجدد آن نمی باشد اما در صورت نیاز، ماژول های استفاده شده به شرح زیر می باشند.</p>
+<ol>
+<li>psycopg2</li>
+<li>django</li>
+<li>json5</li>
+<li>shapely</li>
+<li>operator</li>
+<li>geopy</li>
+<li>geopandas </li>
+</ol>
+<h2 id="نحوه-اجرای-پروژه">نحوه اجرای پروژه:</h2>
+<p>ابتدا در پایگاه داده PostgreSQL ، سرور و دیتابیس با نام دلخواه ایجاد کنید و سپس در فایل جیسون در پوشه اصلی با نام Setup_db_connection ، نام دیتابیس، نام کاربری، گذرواژه، هاست و پورت را وارد بفرمایید.</p>
+<p>مانند:</p>
+<p>{&quot;database&quot;: &quot;Car_traffic_control_db&quot;, &quot;user&quot;: &quot;postgres&quot;, &quot;password&quot;: &quot;Car1234&quot;, &quot;host&quot;: &quot;localhost&quot;, &quot;port&quot;: &quot;5432&quot;}</p>
+<p>در مسیر اصلی پروژه دستور زیر را در ترمینال وارد بفرمایید</p>
+<blockquote>
+<p>venv\Scripts\activate\. </p>
+</blockquote>
+<p>سپس یکبار دستور زیر را وارد بفرمایید.</p>
+<blockquote>
+<p>python only_run_once.py</p>
+</blockquote>
+<p>سپس دستور زیر را وارد بفرمایید تا سرور اجرا شود</p>
+<blockquote>
+<p>python manage.py runserver</p>
+</blockquote>
+<p>حال آدرس HTTP اجرا شده را در مروگری باز بفرمایید</p>
+
+</body>
+</html>
